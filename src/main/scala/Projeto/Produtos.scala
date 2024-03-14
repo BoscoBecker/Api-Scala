@@ -1,12 +1,12 @@
-package HelloRoute
+package Produtos
 
 import Projeto.Connect
 import akka.http.scaladsl.server.Directives._
-case class Hello() {
+case class Produtos() {
   val connection = new Connect();
-    object HelloRoutes {
-      val routes =
-        path("hello") {
+    object ProdutosRoute {
+      val route =
+        path("Produtos") {
           get {
             val result = connection
                           .SQLServerConnection
