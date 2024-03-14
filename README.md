@@ -1,9 +1,10 @@
 
-API Made in Scala 2.13
+
 
 ![image](https://github.com/BoscoBecker/Api-Scala/assets/6303278/c4ecd07c-793a-466f-a36e-c802b0893ef4)
 
 
+API Made in Scala 2.13
 Realizando conexão com banco de dados SQL Server
 
 libraryDependencies ++= Seq(
