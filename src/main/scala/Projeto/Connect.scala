@@ -28,6 +28,8 @@ case class Connect() {
           val Nome = resultSet.getString("Nome")
           val Descricao = resultSet.getString("Descricao")
           resultSeq :+= s"${id.toString} -  $Nome - $Descricao"
+          //val row: Seq[String] = fields.map(resultSet.getString)
+          //resultSeq :+= row.toString()
         }
       } catch {
         case e: Exception => e.printStackTrace()

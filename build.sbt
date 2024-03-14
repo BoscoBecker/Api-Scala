@@ -6,7 +6,8 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-core" % "0.14.1",
   "io.circe" %% "circe-generic" % "0.14.1",
   "io.circe" %% "circe-parser" % "0.14.1",
-  "com.microsoft.sqlserver" % "mssql-jdbc" % "9.4.1.jre11"
+  "com.microsoft.sqlserver" % "mssql-jdbc" % "9.4.1.jre11",
+  "com.typesafe.play" %% "play-json" % "2.9.2"
 
 )
 ThisBuild / version := "0.1.0-SNAPSHOT"
