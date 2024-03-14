@@ -29,10 +29,11 @@ case class Connect() {
 
         while (resultSet.next()) {
           // Aqui você pode acessar os resultados do ResultSet
-          val column1Value = resultSet.getString("Nome")
-          val column2Value = resultSet.getString("Descricao")
+          val id = resultSet.getInt("id")
+          val Nome = resultSet.getString("Nome")
+          val Descricao = resultSet.getString("Descricao")
           // Adicione os dados ao resultado
-          resultSeq :+= s"$column1Value - $column2Value"
+          resultSeq :+= s"${id.toString} -  $Nome - $Descricao"
         }
       } catch {
         case e: Exception => e.printStackTrace()
