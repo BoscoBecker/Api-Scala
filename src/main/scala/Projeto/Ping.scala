@@ -1,8 +1,8 @@
 package Ping
 
 import akka.http.scaladsl.server.Directives.{complete, get, path}
-class Ping {
-  object Ping {
+case class Ping() {
+  object PingRoutes {
     val routes =
       path("ping") {
         get {

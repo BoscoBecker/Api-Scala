@@ -1,21 +1,21 @@
-import HelloRoute.HelloRoute
+import HelloRoute.Hello
 import Ping.Ping
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives._
-import akka.stream.ActorMaterializer
 
 object Projeto extends App {
   implicit val system = ActorSystem("my-system")
-  implicit val materializer = ActorMaterializer()
+  //implicit val materializer = ActorMaterializer()
   implicit val executionContext = system.dispatcher
 
-  val hello = new HelloRoute();
-  val ping = new Ping();
+  private val hello = Hello();
+  private val ping = Ping();
+
 
   val combinedRoutes = concat(
     hello.HelloRoutes.routes,
-    ping.Ping.routes
+    ping.PingRoutes.routes
   )
 
 
